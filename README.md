@@ -65,16 +65,22 @@ First I normalized all the data by dividing it by 255. Then I constructed LeNet 
 | RELU					|												       |
 | Fully connected		| 10 neurones										   |
 
-To train the model I used 50 epochs with mini batches of size 128 and a learning rate of 0.001. As for the lost function I used the cross entropy and for the optimization I chosed Adam Optmizer. The final results are :
+To train the model I used 50 epochs with mini batches of size 128 and a learning rate of 0.001. As for the lost function I used the cross entropy and for the optimization I chosed Adam Optmizer. 
+I chosed to work with LeNet architecture because it's widely used in image classification and it proved itself in so many applications. Looking at the results below, we can see that the validation and test accuracy are very good. Thus, LeNet architecture was a good choice.
 * The accuracy of the training set : 1
 * The accuracy of the validation set : 0.931
 * The accuracy of the test set : 0.916
+Adam was used as an optimizer because it has low memory requirements and it's appropriate for problems with very noisy or sparse gradients. As for the activation function, I worked with ReLU because it avoids the vanishing gradients problem and it is faster than the sigmoid function.
+The learning rate and the number of epochs were tuned to prevent the model from overfitting and underfitting. When the accuracy of the training set was small, I tried to decrease the learning rate and increased the epochs. And when it was higher than the validation accuracy I deacreased the epochs (early stopping)
+
 
 ### Test a Model on New Images
 
 Here are five German traffic signs that I found on the web:
 
 ![alt text][image3]
+
+The images are clear and have a good contrast. They have no special characteristics that would mislead the model 
 
 Here are the results of the prediction:
 
