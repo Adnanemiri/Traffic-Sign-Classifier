@@ -70,6 +70,7 @@ I chosed to work with LeNet architecture because it's widely used in image class
 * The accuracy of the training set : 1
 * The accuracy of the validation set : 0.931
 * The accuracy of the test set : 0.916
+
 Adam was used as an optimizer because it has low memory requirements and it's appropriate for problems with very noisy or sparse gradients. As for the activation function, I worked with ReLU because it avoids the vanishing gradients problem and it is faster than the sigmoid function.
 The learning rate and the number of epochs were tuned to prevent the model from overfitting and underfitting. When the accuracy of the training set was small, I tried to decrease the learning rate and increased the epochs. And when it was higher than the validation accuracy I deacreased the epochs (early stopping)
 
